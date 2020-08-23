@@ -1,15 +1,18 @@
 import React, { useState } from "react";
 
 const InputSearch = ({ setMovies }) => {
+    
   const [title, setTitle] = useState("");
   const handleChange = (e) => {
     setTitle(e.target.value);
   };
 
   const handleSubmit = async (e) => {
+    
+    e.preventDefault();
+    //probar que todo funcione correcto
     const apiKey = "f05561ad";
     const url = ` http://www.omdbapi.com/?apikey=${apiKey}&s=${title}`;
-    e.preventDefault();
     if (title.length === 0) {
       //valida que no este vacio y mostrar un error
       console.log("debes ingresa un campo");
@@ -32,7 +35,7 @@ const InputSearch = ({ setMovies }) => {
         <div className="row ">
           <div className="col-md-6 ">
             <form onSubmit={(e) => handleSubmit(e)}>
-              <div className="form-group">
+              <div className="form-group px-4 pt-4 pb-0">
                 <input
                   type="text"
                   className="form-control "
@@ -46,7 +49,7 @@ const InputSearch = ({ setMovies }) => {
           </div>
 
           <div className="col-md-6 ">
-            <div className="form-group text-center">
+            <div className="form-group text-center px-4">
               <button
                 onClick={(e) => handleSubmit(e)}
                 className="btn btn-info btn-block"
