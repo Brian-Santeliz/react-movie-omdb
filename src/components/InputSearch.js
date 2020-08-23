@@ -35,6 +35,7 @@ const InputSearch = ({setMovies}) => {
                   placeholder="Type a title of movie..."
                   autoFocus
                   onChange={(e) => handleChange(e)}
+                  value={title}
                 />
               </div>
             </form>
