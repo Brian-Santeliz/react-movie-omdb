@@ -1,5 +1,6 @@
 body{
-    background:#022935;
+    background:
+      #24283e  ;
 }
 .btn-submit{
     border-radius:6em;
@@ -9,9 +10,7 @@ body{
     border-radius:3em;
     border:none;
 }
-.input{
-    background:#022935;
-}
+
 
 .card-color{
     background:#737070;

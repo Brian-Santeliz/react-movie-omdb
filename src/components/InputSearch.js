@@ -4,7 +4,7 @@ import dataFetch from "../helper";
 const InputSearch = ({ setMovies }) => {
     
   const [title, setTitle] = useState("");
-  
+  const [error, setError] = useState('')
   const handleChange = (e) => {
     setTitle(e.target.value);
   };
@@ -13,17 +13,19 @@ const InputSearch = ({ setMovies }) => {
     e.preventDefault();
     if (title.length === 0) {
       //valida que no este vacio y mostrar un error
-      console.log("debes ingresa un campo");
+      setError("debes ingresa un campo");
       return;
     }
+    setError('')
   const response = await dataFetch(title)
      if (response.Response === "False") {
-       console.log("esta pelicula no existe");
+       setError("esta pelicula no existe");
        setTitle("");
        return;
      }
      setMovies(response.Search);
      setTitle("");
+     setError('')
   };
   return (
     <>
@@ -56,7 +58,7 @@ const InputSearch = ({ setMovies }) => {
             </div>
           </div>
         </div>
-        
+        {error !== '' ? error : null}
       </div>
     </>
   );

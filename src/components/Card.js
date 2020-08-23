@@ -5,6 +5,7 @@ const Card = ({ movie }) => {
 
   return (
     <>
+    <Fade>
       <div className="card my-3 card-color">
         <img src={Poster} alt={Title} className="img-fluid card-img-top " />
         <div className="card-body">
@@ -15,6 +16,7 @@ const Card = ({ movie }) => {
           </div>
         </div>
       </div>
+      </Fade>
     </>
   );
 };
