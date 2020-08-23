@@ -22,10 +22,9 @@ const InputSearch = ({setMovies}) => {
     if(response.Response === 'False'){
         console.log('esta pelicula no existe')
         setTitle('')
-        
         return 
     }
-    console.log(response)
+    setMovies(response)
     setTitle('')
   };
   return (
