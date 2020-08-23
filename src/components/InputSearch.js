@@ -24,7 +24,7 @@ const InputSearch = ({setMovies}) => {
         setTitle('')
         return 
     }
-    setMovies(response)
+    setMovies(response.Search)
     setTitle('')
   };
   return (

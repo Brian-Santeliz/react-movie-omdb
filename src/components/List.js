@@ -1,11 +1,14 @@
 import React from 'react'
+import Card from './Card'
 
 
 const List = ({movies}) => {
     if(movies.length === 0) return null
-    console.log(movies)
+   
     return ( 
-        <h1>desde moves</h1>
+        <div>
+           
+        </div>
      );
 }
  
