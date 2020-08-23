@@ -1,9 +1,11 @@
 import React, { useState } from "react";
+import Error from './Error'
 
 const InputSearch = ({ setMovies }) => {
     
   const [title, setTitle] = useState("");
   const [error, setError] = useState(false)
+  
   const handleChange = (e) => {
     setTitle(e.target.value);
   };
@@ -18,6 +20,8 @@ const InputSearch = ({ setMovies }) => {
       //valida que no este vacio y mostrar un error
       setError(true)
       console.log("debes ingresa un campo");
+    
+      
       return;
     }
     //consultar api
@@ -26,6 +30,8 @@ const InputSearch = ({ setMovies }) => {
     const response = await res.json();
     if (response.Response === "False") {
       console.log("esta pelicula no existe");
+      
+      
       setError(true)
       setTitle("");
       return;
@@ -65,6 +71,7 @@ const InputSearch = ({ setMovies }) => {
             </div>
           </div>
         </div>
+        {error && <Error mensaje={response.Response === "False" ? 'no existwe' :'los campso'}/>}
       </div>
     </>
   );
