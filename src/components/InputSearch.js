@@ -19,6 +19,12 @@ const InputSearch = ({setMovies}) => {
     //consultar api
     const res = await fetch(url)
     const response = await res.json()
+    if(response.Response === 'False'){
+        console.log('esta pelicula no existe')
+        setTitle('')
+        
+        return 
+    }
     console.log(response)
     setTitle('')
   };
