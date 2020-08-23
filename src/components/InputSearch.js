@@ -2,7 +2,25 @@ import React,{useState} from "react";
 
 
 const InputSearch = ({setMovies}) => {
-    
+    const [title,setTitle] = useState('')
+  const handleChange = (e) => {
+    setTitle(e.target.value);
+  };
+
+  const handleSubmit = async(e) => {
+    const apiKey = 'f05561ad'
+    const url =` http://www.omdbapi.com/?apikey=${apiKey}&s=${title}`
+    e.preventDefault();
+    if(title.length === 0){
+        //valida que no este vacio y mostrar un error
+        console.log('debes ingresa un campo')
+        return 
+    }
+    //consultar api
+    const res = await fetch(url)
+    const response = await res.json()
+    console.log(response)
+    setTitle('')
   };
   return (
     <>
