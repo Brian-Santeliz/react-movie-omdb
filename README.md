@@ -1,18 +1,4 @@
-## Random Quotes Simpsons
 
-![Random Quotes Simpsons](./doc/1.png)
-
----
-Resource:
-
-* React JS
-* Hooks (useState & useEffect)
-* Emotion
-* Axios
-
-API: https://thesimpsonsquoteapi.glitch.me/quotes
-
----
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

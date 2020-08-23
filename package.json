@@ -1,5 +1,5 @@
 {
-  "name": "ramdom-quote-simpsons",
+  "name": "react-movie-omdb",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
