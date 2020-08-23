@@ -9,3 +9,11 @@ body{
     border-radius:3em;
     border:none;
 }
+.input{
+    background:#022935;
+}
+
+.card-color{
+    background:#022935;
+    color:white
+}

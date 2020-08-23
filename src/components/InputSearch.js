@@ -32,7 +32,7 @@ const InputSearch = ({ setMovies }) => {
   return (
     <>
       <div className="container mt-4">
-        <div className="row p-3">
+        <div className="row p-3 input">
           <div className="col-md-6 ">
             <form onSubmit={(e) => handleSubmit(e)}>
               <div className="form-group  px-4  ">
