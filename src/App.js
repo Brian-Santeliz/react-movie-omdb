@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Header from "./components/Header";
 import InputSearch from "./components/InputSearch";
+import List from "./components/List";
 
 function App() {
   const [movies, setMovies] = useState([])
@@ -8,6 +9,9 @@ function App() {
     <>
       <Header title="Search Movie DB" />
       <InputSearch setMovies={setMovies}/>
+      <List
+        movies={movies}
+      />
     </>
   );
 }
