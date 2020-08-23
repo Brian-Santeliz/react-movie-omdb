@@ -1,10 +1,9 @@
 import React, { useState } from "react";
-import Error from './Error'
+// import Error from './Error'
 
 const InputSearch = ({ setMovies }) => {
     
   const [title, setTitle] = useState("");
-  const [error, setError] = useState(false)
   
   const handleChange = (e) => {
     setTitle(e.target.value);
@@ -18,25 +17,21 @@ const InputSearch = ({ setMovies }) => {
     const url = ` http://www.omdbapi.com/?apikey=${apiKey}&s=${title}`;
     if (title.length === 0) {
       //valida que no este vacio y mostrar un error
-      setError(true)
       console.log("debes ingresa un campo");
     
       
       return;
     }
     //consultar api
-    setError(false)
     const res = await fetch(url);
     const response = await res.json();
     if (response.Response === "False") {
       console.log("esta pelicula no existe");
       
       
-      setError(true)
       setTitle("");
       return;
     }
-    setError(false)
     setMovies(response.Search);
     setTitle("");
   };
@@ -71,7 +66,7 @@ const InputSearch = ({ setMovies }) => {
             </div>
           </div>
         </div>
-        {error && <Error mensaje={response.Response === "False" ? 'no existwe' :'los campso'}/>}
+        
       </div>
     </>
   );

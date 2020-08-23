@@ -1,10 +1,11 @@
 import React from "react";
-
+import Fade from 'react-reveal/Fade'
 const Card = ({ movie }) => {
   const { Title, Year, Type, Poster } = movie;
 
   return (
     <>
+    <Fade top>
       <div className="card my-3 card-color">
         <img src={Poster} alt={Title} className="img-fluid card-img-top " />
         <div className="card-body">
@@ -15,6 +16,7 @@ const Card = ({ movie }) => {
           </div>
         </div>
       </div>
+      </Fade>
     </>
   );
 };
