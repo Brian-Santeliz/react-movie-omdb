@@ -1,9 +1,15 @@
 import React from 'react';
 
 const Card = ({movie}) => {
-    console.log(movie)
+    const {Title,Year,Type, Poster } = movie
     return ( 
-        <h1>desde Card</h1>
+        <>
+            <div className="card">
+                <div className="card-body">
+                    <img src={Poster} alt=""/>
+                </div>
+            </div>
+        </>
      );
 }
  
