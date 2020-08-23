@@ -8,7 +8,7 @@ const List = ({ movies }) => {
   return (
     <>
       <div className="container">
-        <div className="row p-4">
+        <div className="row p-5">
           {movies.map((movie) => (
           <div className="col-md-3" key={movie.imdbID}>
             <Card  movie={movie} />

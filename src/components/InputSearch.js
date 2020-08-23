@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-// import Error from './Error'
+ import Error from './Error'
 import dataFetch from "../helper";
 const InputSearch = ({ setMovies }) => {
     
@@ -13,13 +13,13 @@ const InputSearch = ({ setMovies }) => {
     e.preventDefault();
     if (title.length === 0) {
       //valida que no este vacio y mostrar un error
-      setError("debes ingresa un campo");
+      setError("Must type a title to search");
       return;
     }
     setError('')
   const response = await dataFetch(title)
      if (response.Response === "False") {
-       setError("esta pelicula no existe");
+       setError("This movie doesn't exist");
        setTitle("");
        return;
      }
@@ -58,8 +58,10 @@ const InputSearch = ({ setMovies }) => {
             </div>
           </div>
         </div>
-        {error !== '' ? error : null}
       </div>
+      <Error
+          error={error}
+        />
     </>
   );
 };
