@@ -7,7 +7,13 @@ const List = ({movies}) => {
    
     return ( 
         <div>
-           
+            {movies.map(movie=>
+               
+                <Card
+                    movie={movie}
+                />  
+               
+            )}
         </div>
      );
 }
