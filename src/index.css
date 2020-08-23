@@ -1,0 +1,11 @@
+body{
+    background:#022935;
+}
+.btn-submit{
+    border-radius:6em;
+    border:none;
+}
+.form{
+    border-radius:3em;
+    border:none;
+}

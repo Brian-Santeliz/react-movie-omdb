@@ -7,9 +7,9 @@ const Card = ({ movie }) => {
   return (
     <>
      <div className="card my-3">
-             <img src={Poster} alt={Title} className="img-fluid card-img-top" />
+             <img src={Poster} alt={Title} className="img-fluid card-img-top " />
         <div className="card-body">
-            <h5 className="text-center mt-1">{Title}</h5>
+            <h5 className="text-center">{Title}</h5>
             <div className="d-flex justify-content-between">
                 <small className="font-weight-bold">Year: {Year}</small> 
                  <small className="font-weight-bold">Type: {Type}</small>

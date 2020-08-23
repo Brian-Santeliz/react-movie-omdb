@@ -32,13 +32,13 @@ const InputSearch = ({ setMovies }) => {
   return (
     <>
       <div className="container mt-4">
-        <div className="row ">
+        <div className="row p-3">
           <div className="col-md-6 ">
             <form onSubmit={(e) => handleSubmit(e)}>
-              <div className="form-group px-4 pt-4 pb-0">
+              <div className="form-group  px-4  ">
                 <input
                   type="text"
-                  className="form-control "
+                  className="form-control form "
                   placeholder="Type a title of movie..."
                   autoFocus
                   onChange={(e) => handleChange(e)}
@@ -52,7 +52,7 @@ const InputSearch = ({ setMovies }) => {
             <div className="form-group text-center px-4">
               <button
                 onClick={(e) => handleSubmit(e)}
-                className="btn btn-info btn-block"
+                className="btn btn-info btn-block btn-submit"
                 type="submit"
               >
                 Search
