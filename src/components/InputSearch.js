@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 // import Error from './Error'
-
+import dataFetch from "../helper";
 const InputSearch = ({ setMovies }) => {
     
   const [title, setTitle] = useState("");
@@ -10,30 +10,20 @@ const InputSearch = ({ setMovies }) => {
   };
 
   const handleSubmit = async (e) => {
-    
     e.preventDefault();
-    //probar que todo funcione correcto
-    const apiKey = "f05561ad";
-    const url = ` http://www.omdbapi.com/?apikey=${apiKey}&s=${title}`;
     if (title.length === 0) {
       //valida que no este vacio y mostrar un error
       console.log("debes ingresa un campo");
-    
-      
       return;
     }
-    //consultar api
-    const res = await fetch(url);
-    const response = await res.json();
-    if (response.Response === "False") {
-      console.log("esta pelicula no existe");
-      
-      
-      setTitle("");
-      return;
-    }
-    setMovies(response.Search);
-    setTitle("");
+  const response = await dataFetch(title)
+     if (response.Response === "False") {
+       console.log("esta pelicula no existe");
+       setTitle("");
+       return;
+     }
+     setMovies(response.Search);
+     setTitle("");
   };
   return (
     <>
