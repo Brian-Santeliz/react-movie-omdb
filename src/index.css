@@ -16,3 +16,6 @@ body{
     background:#737070;
     color:white
 }
+.btn{
+    border-radius: 3em !important;
+}

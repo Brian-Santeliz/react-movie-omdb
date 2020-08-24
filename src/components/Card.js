@@ -1,8 +1,8 @@
 import React from "react";
 import Fade from 'react-reveal/Fade'
 const Card = ({ movie }) => {
-  const { Title, Year, Type, Poster } = movie;
-
+  const { Title, Year, Type, Poster,imdbID } = movie;
+  
   return (
     <>
     <Fade>
@@ -12,11 +12,13 @@ const Card = ({ movie }) => {
           <div className="card-title">
               <h5 className="text-center ">{Title}</h5>
           </div>
-        <a className=" btn-info btn-block my-1 card-text">More info</a>
+        
+  <button className="btn  btn-info btn-block my-1 card-text mt-3">{imdbID}</button>
           <div className="d-flex justify-content-between mt-2">
-            <small className="font-weight-bold">Year: {Year}</small>
-            <small className="font-weight-bold">Type: {Type}</small>
+            <small className="font-weight-normal">Year: <span className=" font-weight-bold">{Year}</span></small>
+            <small className="font-weight-normal">Type: <span className="font-weight-bold" >{Type}</span></small>
           </div>
+
         </div>
       </div>
       </Fade>
