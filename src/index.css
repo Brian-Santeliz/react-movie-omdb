@@ -1,16 +1,35 @@
+:root{
+    --base:#24283e;
+}
 body{
-    background:
-      #24283e  ;
+    background:var(--base) ;
 }
 .btn-submit{
     border-radius:6em;
     border:none;
 }
-.form{
-    border-radius:3em;
-    border:none;
+.form-div{
+    background:var(--base)
 }
-
+.form{
+    background: transparent;
+    outline:none;
+    border:none;
+    border-bottom:1px solid #207886;
+    color:#fff;
+    display: block;
+    width: 100%;
+    height: calc(1.5em + .75rem + 2px);
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    background-clip: padding-box;
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out
+}
+.form::placeholder{
+    color:rgba(238, 238, 238, 0.767);
+}
 
 .card-color{
     background:#737070;

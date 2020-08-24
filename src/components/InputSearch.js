@@ -33,10 +33,10 @@ const InputSearch = ({ setMovies }) => {
         <div className="row p-3 input">
           <div className="col-md-6 ">
             <form onSubmit={(e) => handleSubmit(e)}>
-              <div className="form-group  px-4  ">
+              <div className="form-group  form-div px-4  ">
                 <input
                   type="text"
-                  className="form-control form "
+                  className=" form "
                   placeholder="Type a title of movie..."
                   autoFocus
                   onChange={(e) => handleChange(e)}
