@@ -1,18 +1,17 @@
-import React, { useState } from "react";
-import Header from "./components/Header";
-import InputSearch from "./components/InputSearch";
-import List from "./components/List";
+import React from "react";
+import Home from "./components/Home";
+import {BrowserRouter as Router, Route, Switch} from 'react-router-dom'
 
 function App() {
-  const [movies, setMovies] = useState([])
+ 
 
   return (
     <>
-      <Header title="Search Movie DB" />
-      <InputSearch setMovies={setMovies} />
-      <List
-        movies={movies}
-      />
+      <Router>
+          <Switch>
+              <Route path='/' component={Home}/>
+          </Switch>
+      </Router>
     </>
   );
 }
