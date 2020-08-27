@@ -1,10 +1,12 @@
-const dataFetch = async(title) =>{
 const apiKey = "f05561ad";
+export const dataFetch = async(title) =>{
 const url = ` http://www.omdbapi.com/?apikey=${apiKey}&s=${title}`;
-
-//consultar api
+//query api
 const res = await fetch(url);
 return await res.json();
-
 }
-export default dataFetch
+export const fetchApi = async(id)=>{
+    const res = await fetch(`http://www.omdbapi.com/?apikey=${apiKey}&i=${id}`)
+  return await res.json()
+  
+}

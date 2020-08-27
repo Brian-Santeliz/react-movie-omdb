@@ -1,24 +1,21 @@
 import React,{useEffect,useState} from 'react';
-import Header from './Header'
 import {useParams} from 'react-router-dom'
+import { fetchApi} from '../helper'
 
 const About = () => {
     const {id} = useParams();
-    const [about,setAbout] = useState([])
+    const [about,setAbout] = useState({})
     useEffect(()=>{
-        const fetchApi = async()=>{
-            const key = 'f05561ad'
-            const res = await fetch(`http://www.omdbapi.com/?apikey=${key}&i=${id}`)
-           const response = await  res.json()
-           setAbout(response)
+       
+        const init = async()=>{
+            const res = await  fetchApi(id)
+        console.log(res)
         }
-        fetchApi()
-    },[])
+            init()
+    },[id])
     return ( 
         <>
-        <Header
-            title='desde ruta normal'
-        />
+      
     <h1 className="text-white">desde About con el id {id}  </h1>
     </>
      );

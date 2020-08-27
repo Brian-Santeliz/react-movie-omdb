@@ -28,7 +28,7 @@ body{
     transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out
 }
 .form:focus{
-    border-bottom: 1px solid #10c3df;
+    border-bottom: 2px solid #10c3df;
 }
 .form::placeholder{
     color:rgba(238, 238, 238, 0.767);

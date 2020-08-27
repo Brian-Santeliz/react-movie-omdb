@@ -1,6 +1,6 @@
 import React from "react";
 import Home from "./components/Home";
-// import Header from "./components/Header";
+import Header from "./components/Header";
 import About from "./components/About";
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom'
 
@@ -10,7 +10,7 @@ function App() {
   return (
     <>
       <Router>
-      {/* <Header title="Search Movie DB" /> */}
+      <Header title="Search Movie DB" />
         
           <Switch>
               <Route exact path='/' component={Home}/>

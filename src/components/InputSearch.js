@@ -1,6 +1,6 @@
 import React, { useState } from "react";
  import Error from './Error'
-import dataFetch from "../helper";
+import {dataFetch} from "../helper";
 const InputSearch = ({ setMovies }) => {
     
   const [title, setTitle] = useState("");
