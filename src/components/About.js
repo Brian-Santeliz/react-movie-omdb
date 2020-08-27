@@ -1,8 +1,16 @@
 import React from 'react';
+import Header from './Header'
+import {useParams} from 'react-router-dom'
 
 const About = () => {
+    const {id} = useParams();
     return ( 
-    <h1>desde About con el id </h1>
+        <>
+        <Header
+            title='desde ruta normal'
+        />
+    <h1 className="text-white">desde About con el id {id}  </h1>
+    </>
      );
 }
  

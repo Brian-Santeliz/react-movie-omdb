@@ -16,7 +16,7 @@ const Card = ({ movie }) => {
 
             <Link
               className="btn  btn-info btn-block my-1 card-text mt-3"
-              to="/about"
+              to={`/about/${imdbID}`}
             >
               More info
             </Link>
