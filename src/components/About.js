@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { fetchApi } from "../helper";
 import star from "./star.png";
+import Spinner from './Spinner'
 const About = () => {
   const { id } = useParams();
   const [about, setAbout] = useState({});
@@ -30,7 +31,11 @@ const About = () => {
     <>
       <div className="container">
         <div className="row">
-          {load && "Loading..."}
+          <div className="container">
+              <div className="text-center ">
+              {load && <Spinner/>}
+              </div>
+          </div>
           <div className="col-md-6 mx-auto text-center">
             <img
               src={Poster}
@@ -42,7 +47,7 @@ const About = () => {
             <h2 className="text-white my-4 text-center">
               {Title && Year && `${Title} (${Year})`}
             </h2>
-            <span className="text-white mb-1 size">
+            <span className="text-white mb-2 size">
               {imdbRating && <img src={star} alt="Rating" />}
               <span> {imdbRating && `${imdbRating}/10`}</span>
             </span>
