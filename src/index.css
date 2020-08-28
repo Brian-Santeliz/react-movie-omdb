@@ -41,3 +41,6 @@ body{
 .btn{
     border-radius: 3em !important;
 }
+.border{
+    border-radius:2em;
+}

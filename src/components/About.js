@@ -8,15 +8,26 @@ const About = () => {
     useEffect(()=>{
        
         const init = async()=>{
-            const res = await  fetchApi(id)
-        console.log(res)
+        const res = await  fetchApi(id)
+        setAbout(res)
         }
             init()
     },[id])
+    const {Poster, Title, Plot, Actors} = about
     return ( 
         <>
-      
-    <h1 className="text-white">desde About con el id {id}  </h1>
+        <div className="container">
+            <div className="row">
+                <div className="col-md-6 mx-auto text-center">
+                    <img src={Poster} alt={Title} className="img-fluid  my-3 p-2 border"/>
+                </div> 
+                <div className="col-md-6">
+                  <h2 className="text-white my-3">{Title}</h2>
+
+                </div>   
+            </div>    
+        </div>  
+    
     </>
      );
 }
