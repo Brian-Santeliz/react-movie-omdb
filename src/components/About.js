@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import { fetchApi } from "../helper";
 import star from "./star.png";
 import Spinner from './Spinner'
+import ButtonHome from './ButtonHome'
 const About = () => {
   const { id } = useParams();
   const [about, setAbout] = useState({});
@@ -61,6 +62,7 @@ const About = () => {
             </p>
             <p className="text-white mt-1">{Genre && `Genre: ${Genre}`}</p>
           </div>
+          {imdbRating && <ButtonHome/>}
         </div>
       </div>
     </>
