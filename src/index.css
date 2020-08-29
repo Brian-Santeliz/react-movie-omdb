@@ -7,6 +7,7 @@ body{
 .btn-submit{
     border-radius:6em;
     border:none;
+    font-weight:bold;
 }
 .form-div{
     background:var(--base)

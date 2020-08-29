@@ -12,7 +12,7 @@ const InputSearch = ({ setMovies }) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (title.length === 0) {
-      //valida que no este vacio y mostrar un error
+      //validate the error
       setError("Must type a title to search");
       return;
     }
