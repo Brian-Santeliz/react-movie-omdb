@@ -1,4 +1,4 @@
-const apiKey = "f05561ad";
+const apiKey = process.env.REACT_APP_API_KEY;
 export const dataFetch = async(title) =>{
 const url = ` http://www.omdbapi.com/?apikey=${apiKey}&s=${title}`;
 //query api

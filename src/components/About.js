@@ -6,7 +6,6 @@ import ButtonHome from './ButtonHome'
 import AboutDetails from './AboutDetails'
 
 const About = () => {
-  /* VAlida que no este vacio */
   const { id } = useParams();
   const [about, setAbout] = useState({});
   const [load, setLoad] = useState(false);
