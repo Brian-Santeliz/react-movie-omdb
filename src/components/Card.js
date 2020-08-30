@@ -1,6 +1,8 @@
 import React from "react";
 import Fade from "react-reveal/Fade";
 import { Link } from "react-router-dom";
+import PropTypes from "prop-types";
+
 const Card = ({ movie }) => {
   const { Title, Year, Type, Poster, imdbID } = movie;
 
@@ -34,5 +36,7 @@ const Card = ({ movie }) => {
     </>
   );
 };
-
+Card.propTypes = {
+  movie: PropTypes.object.isRequired,
+};
 export default Card;

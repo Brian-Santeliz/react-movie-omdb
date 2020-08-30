@@ -1,6 +1,7 @@
 import React from "react";
 import star from "./star.png";
 import Slide from "react-reveal";
+import PropTypes from "prop-types";
 
 const AboutDetails = ({ about }) => {
   if (Object.keys(about).length === 0) return null;
@@ -44,5 +45,7 @@ const AboutDetails = ({ about }) => {
     </>
   );
 };
-
+AboutDetails.propTypes={
+  about:PropTypes.object.isRequired,
+}
 export default AboutDetails;

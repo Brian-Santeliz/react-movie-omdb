@@ -1,10 +1,10 @@
 import React, { useState } from "react";
- import Error from './Error'
-import {dataFetch} from "../helper";
+import Error from "./Error";
+import { dataFetch } from "../helper";
+import PropTypes from "prop-types";
 const InputSearch = ({ setMovies }) => {
-    
   const [title, setTitle] = useState("");
-  const [error, setError] = useState('')
+  const [error, setError] = useState("");
   const handleChange = (e) => {
     setTitle(e.target.value);
   };
@@ -16,16 +16,16 @@ const InputSearch = ({ setMovies }) => {
       setError("Must type a title to search");
       return;
     }
-    setError('')
-  const response = await dataFetch(title)
-     if (response.Response === "False") {
-       setError("This movie doesn't exist");
-       setTitle("");
-       return;
-     }
-     setMovies(response.Search);
-     setTitle("");
-     setError('')
+    setError("");
+    const response = await dataFetch(title);
+    if (response.Response === "False") {
+      setError("This movie doesn't exist");
+      setTitle("");
+      return;
+    }
+    setMovies(response.Search);
+    setTitle("");
+    setError("");
   };
   return (
     <>
@@ -59,11 +59,11 @@ const InputSearch = ({ setMovies }) => {
           </div>
         </div>
       </div>
-      <Error
-          error={error}
-        />
+      <Error error={error} />
     </>
   );
 };
-
+InputSearch.propTypes = {
+  setMovies: PropTypes.func.isRequired,
+};
 export default InputSearch;
