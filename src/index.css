@@ -1,8 +1,10 @@
 :root{
-    --base:#24283e;
+    --base:#21232a;
 }
 body{
-    background:var(--base) ;
+    background:var(--base);
+    font-family: 'Lato', sans-serif;
+
 }
 .btn-submit{
     border-radius:6em;

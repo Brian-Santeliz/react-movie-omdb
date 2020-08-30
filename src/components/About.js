@@ -4,6 +4,7 @@ import { fetchApi } from "../helper";
 import Spinner from './Spinner'
 import ButtonHome from './ButtonHome'
 import AboutDetails from './AboutDetails'
+
 const About = () => {
   /* VAlida que no este vacio */
   const { id } = useParams();
@@ -28,7 +29,6 @@ const About = () => {
               {load && <Spinner/>}
               </div>
           </div>
-          {/* MOver a otro componente, agregar transiccion */}
          <AboutDetails 
           about={about}
          />
