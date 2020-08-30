@@ -2,6 +2,7 @@ import React from "react";
 import Home from "./components/Home";
 import Header from "./components/Header";
 import About from "./components/About";
+import NotFound from "./components/NotFound";
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom'
 
 function App() {
@@ -15,9 +16,11 @@ function App() {
           <Switch>
               <Route exact path='/' component={Home}/>
               <Route exact path='/about/:id' component={About}/>
-              {/* RUta 404 agregar,  */}
+              <Route path='*' component={NotFound}/>
           </Switch>
+
       </Router>
+
     </>
   );
 }
