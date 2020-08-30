@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { fetchApi } from "../helper";
-import star from "./star.png";
 import Spinner from './Spinner'
 import ButtonHome from './ButtonHome'
+import AboutDetails from './AboutDetails'
 const About = () => {
+  /* VAlida que no este vacio */
   const { id } = useParams();
   const [about, setAbout] = useState({});
   const [load, setLoad] = useState(false);
@@ -17,17 +18,7 @@ const About = () => {
     };
     init();
   }, [id]);
-  const {
-    Poster,
-    Title,
-    Plot,
-    Actors,
-    Director,
-    Year,
-    Runtime,
-    Genre,
-    imdbRating,
-  } = about;
+  const { imdbRating }  = about
   return (
     <>
       <div className="container">
@@ -37,36 +28,15 @@ const About = () => {
               {load && <Spinner/>}
               </div>
           </div>
-          <div className="col-md-6 mx-auto text-center">
-            <img
-              src={Poster}
-              alt={Title}
-              className="img-fluid  mt-3 p-2 borde"
-            />
-          </div>
-          <div className="col-md-6">
-            <h2 className="text-white my-4 text-center">
-              {Title && Year && `${Title} (${Year})`}
-            </h2>
-            <span className="text-white mb-2 size">
-              {imdbRating && <img src={star} alt="Rating" />}
-              <span> {imdbRating && `${imdbRating}/10`}</span>
-            </span>
-            <p className="text-justify text-white">{Plot}</p>
-            <p className="text-white mt-2">
-              {Director && `Directors: ${Director}`}
-            </p>
-            <p className="text-white mt-1">{Actors && `Actors: ${Actors}`}</p>
-            <p className="text-white mt-1">
-              {Runtime && `Duration: ${Runtime}`}
-            </p>
-            <p className="text-white mt-1">{Genre && `Genre: ${Genre}`}</p>
-          </div>
+          {/* MOver a otro componente, agregar transiccion */}
+         <AboutDetails 
+          about={about}
+         />
           {imdbRating && <ButtonHome/>}
         </div>
       </div>
     </>
   );
 };
-
+/* Agregar prototypes */
 export default About;
