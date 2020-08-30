@@ -3,7 +3,7 @@ import Home from "./components/Home";
 import Header from "./components/Header";
 import About from "./components/About";
 import NotFound from "./components/NotFound";
-import {BrowserRouter as Router, Route, Switch} from 'react-router-dom'
+import {BrowserRouter as Router, Route, Switch, Redirect} from 'react-router-dom'
 
 function App() {
  
@@ -16,7 +16,8 @@ function App() {
           <Switch>
               <Route exact path='/' component={Home}/>
               <Route exact path='/about/:id' component={About}/>
-              <Route path='*' component={NotFound}/>
+              <Route path='/404' component={NotFound}/>
+              <Redirect to='/404' />
           </Switch>
 
       </Router>

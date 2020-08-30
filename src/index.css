@@ -1,5 +1,5 @@
 :root{
-    --base:#21232a;
+    --base:#24283e;
 }
 body{
     background:var(--base);
