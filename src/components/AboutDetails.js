@@ -1,7 +1,8 @@
 import React from "react";
-import star from "./star.png";
+// import star from "./star.png";
 import Slide from "react-reveal";
 import PropTypes from "prop-types";
+import ReactStars from 'react-rating-stars-component'
 
 const AboutDetails = ({ about }) => {
   if (Object.keys(about).length === 0) return null;
@@ -16,6 +17,16 @@ const AboutDetails = ({ about }) => {
     Genre,
     imdbRating,
   } = about;
+  let value = Number(imdbRating)
+  if(isNaN(value)){
+    value = 0.5
+  }
+  const starsParams = {
+    size:30,
+    count:10,
+    isHalf:true,
+    value
+  }
   return (
     <>
       <Slide left>
@@ -29,9 +40,9 @@ const AboutDetails = ({ about }) => {
           <h2 className="text-white my-4 text-center">
             {Title && Year && `${Title} (${Year})`}
           </h2>
-          <span className="text-white mb-2 size">
-            {imdbRating && <img src={star} alt="Rating" />}
-            <span> {imdbRating && `${imdbRating}/10`}</span>
+          <span className="text-white mb-2 d-flex ">
+            <small className="size">Ranking: </small> 
+            <ReactStars {...starsParams} />
           </span>
           <p className="text-justify text-white">{Plot}</p>
           <p className="text-white mt-2">
@@ -45,6 +56,8 @@ const AboutDetails = ({ about }) => {
     </>
   );
 };
+
+
 AboutDetails.propTypes={
   about:PropTypes.object.isRequired,
 }
