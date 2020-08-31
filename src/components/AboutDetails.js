@@ -1,5 +1,4 @@
 import React from "react";
-// import star from "./star.png";
 import Slide from "react-reveal";
 import PropTypes from "prop-types";
 import ReactStars from 'react-rating-stars-component'
