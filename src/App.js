@@ -14,7 +14,7 @@ function App() {
   return (
     <>
       <Router>
-        <Header title="Search Movie DB" />
+        <Header title="Finder Movie" />
         <Switch>
           <Route exact path="/" component={Home} />
           <Route exact path="/about/:id" component={About} />
