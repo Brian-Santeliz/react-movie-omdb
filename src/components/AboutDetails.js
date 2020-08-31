@@ -39,8 +39,7 @@ const AboutDetails = ({ about }) => {
           <h2 className="text-white my-4 text-center">
             {Title && Year && `${Title} (${Year})`}
           </h2>
-          <span className="text-white mb-2 d-flex ">
-            <small className="size">Ranking: </small> 
+          <span className="text-white mb-2  ">
             <ReactStars {...starsParams} />
           </span>
           <p className="text-justify text-white">{Plot}</p>
