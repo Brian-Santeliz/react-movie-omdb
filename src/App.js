@@ -1,11 +1,8 @@
 import React from "react";
-// import Home from "./components/Home";
 import Header from "./components/Header";
-import  About  from "./pages/About";
-import  NotFound  from "./pages/NotFound";
-import  Home  from "./pages/Home";
-// import About from "./components/About";
-// import NotFound from "./components/NotFound";
+import About from "./pages/About";
+import NotFound from "./pages/NotFound";
+import Home from "./pages/Home";
 import {
   BrowserRouter as Router,
   Route,
