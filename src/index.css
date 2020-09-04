@@ -2,56 +2,56 @@
     --base:#24283e;
 }
 body{
-    background:var(--base);
-    font-family: 'Lato', sans-serif;
+    background:var(--base) !important;
+    font-family: 'Lato', sans-serif !important;
 
 }
 .btn-submit{
-    border-radius:6em;
-    border:none;
-    font-weight:bold;
+    border-radius:6em !important;
+    border:none !important;
+    font-weight:bold !important;
 }
 .form-div{
-    background:var(--base)
+    background:var(--base) !important;
 }
 .form{
-    background: transparent;
-    outline:none;
-    border:none;
-    border-bottom:1px solid #207886;
-    color:#fff;
-    display: block;
-    width: 100%;
-    height: calc(1.5em + .75rem + 2px);
-    padding: .375rem .75rem;
-    font-size: 1rem;
-    font-weight: 400;
-    line-height: 1.5;
-    background-clip: padding-box;
-    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out
+    background: transparent !important;
+    outline:none !important;
+    border:none !important;
+    border-bottom:1px solid #207886 !important;
+    color:#fff !important;
+    display: block !important;
+    width: 100% !important;
+    height: calc(1.5em + .75rem + 2px) !important;
+    padding: .375rem .75rem !important;
+    font-size: 1rem !important;
+    font-weight: 400 !important;
+    line-height: 1.5 !important;
+    background-clip: padding-box !important;
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out !important;
 }
 .form:focus{
-    border-bottom: 2px solid #10c3df;
+    border-bottom: 2px solid #10c3df !important;
 }
 .form::placeholder{
-    color:rgba(238, 238, 238, 0.767);
+    color:rgba(238, 238, 238, 0.767) !important;
 }
 
 .card-color{
-    background:#737070;
-    color:white
+    background:#737070 !important;
+    color:white !important;
 }
 .btn{
     border-radius: 3em !important;
 }
 .borde{
-    border-radius:2em;
+    border-radius:2em !important;
 }
 .size{
-    margin-top: 1em;
-    margin-right: 1em;
-    font-size: .9em;
+    margin-top: 1em !important;
+    margin-right: 1em !important;
+    font-size: .9em !important;
 }
 body{
-    overflow-x: hidden;
+    overflow-x: hidden !important;
 }
