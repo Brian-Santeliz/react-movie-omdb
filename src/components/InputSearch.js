@@ -16,6 +16,10 @@ const InputSearch = ({ setMovies }) => {
       setError("Must type a title to search");
       return;
     }
+    if(!navigator.onLine){
+     setError('You need internet connection to find!')
+      return
+    }
     setError("");
     const response = await dataFetch(title);
     if (response.Response === "False") {
